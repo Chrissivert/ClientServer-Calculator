@@ -19,5 +19,18 @@ By making the bookTicket method synchronized we can make sure that only one thre
 public synchronized void bookTicket(String customerName, int numberOfSeats)
 ```
 
-Now when the bookTicket() is run, it prevents multiple threads from booking seats simultaneously. The drawback
-of using synchronization is that it slows down the program, since each thread has to wait for one another to finish.
+Now when the bookTicket() is run, it prevents multiple threads from booking seats simultaneously.
+
+```
+Hi,Xiangming : 10 : Seats available for Troll
+Congratulations, Xiangming : Booked 3 seats for Troll
+Hi,Ilaria : 7 : Seats available for Troll
+Congratulations, Ilaria : Booked 2 seats for Troll
+Hi,Sam : 5 : Seats available for Troll
+Congratulations, Sam : Booked 3 seats for Troll
+Hi,Andreas : 2 : Seats available for Troll
+Sorry, Andreas : No seats available for Troll
+```
+
+The drawback of using synchronization is that it slows down the program, since each thread has to wait for 
+one another to finish.
