@@ -11,10 +11,10 @@ Congratulations, Xiangming : Booked 3 seats for Troll
 Congratulations, Sam : Booked 3 seats for Troll
 Sorry, Ilaria : No seats available for Troll
 ```
-The problem is that it doesn't print out the correct amount of seats available for the movie. The problem is that
+The problem is that it doesn't print out the correct amount of seats available for the movie. This is because
 each thread executes simultaneously and the server doesn't have time to update the amount of seats available before 
-the next thread executes. To fix this we need to synchronize the server so that only one thread can execute at a time.
-By making the bookTicket method synchronized we can make sure that only one thread can execute at a time. 
+the next thread executes. To fix this we need to synchronize the threads so that only one thread can execute at a time.
+We can fix this by making the bookTicket method synchronized.
 ``` 
 public synchronized void bookTicket(String customerName, int numberOfSeats)
 ```
