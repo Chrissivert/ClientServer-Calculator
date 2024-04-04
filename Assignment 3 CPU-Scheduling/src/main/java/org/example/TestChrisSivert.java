@@ -2,8 +2,21 @@ package org.example;
 
 import java.text.ParseException;
 
+/**
+ * First come, first served CPU-scheduling. Enter the number of processes,
+ * burst time and arrival time in main method.
+ */
 public class TestChrisSivert {
 
+
+    /**
+     * Function to find the waiting time for the processes
+     * @param processes array of processes
+     * @param n number of processes
+     * @param burstTime array of burst time
+     * @param waitingTime array of waiting time
+     * @param arrivalTime array of arrival time
+     */
     static void findWaitingTime(int processes[], int n,
                                 int burstTime[], int waitingTime[], int arrivalTime[]) {
         int service_time[] = new int[n];
@@ -20,6 +33,14 @@ public class TestChrisSivert {
         }
     }
 
+    /**
+     * Function to find the turn around time for the processes
+     * @param processes array of processes
+     * @param n number of processes
+     * @param burstTime array of burst time
+     * @param waitingTime array of waiting time
+     * @param turnTime array of turn around time
+     */
     static void findTurnAroundTime(int processes[], int n,
                                    int burstTime[], int waitingTime[], int turnTime[]) {
         // calculating turnaround time by adding
@@ -29,6 +50,14 @@ public class TestChrisSivert {
         }
     }
 
+
+    /**
+     * Function to calculate average time
+     * @param processes array of processes
+     * @param n number of processes
+     * @param burstTime array of burst time
+     * @param arrivalTime array of arrival time
+     */
     static void findavgTime(int processes[], int n, int burstTime[], int arrivalTime[]) {
         int waitTime[] = new int[n], turnTime[] = new int[n];
         int totalWaitingTime = 0, totalTurnTime = 0;
