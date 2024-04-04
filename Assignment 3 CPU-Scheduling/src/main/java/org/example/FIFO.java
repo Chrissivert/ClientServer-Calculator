@@ -3,7 +3,7 @@ package org.example;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Line {
+public class FIFO {
   public static void watingTime(List<Integer> processes, Integer num, List<Integer> burstTime, List<Integer> waitTime) {
     waitTime.add(0, 0);
     for (int i = 1; i < num; i++) {
@@ -23,7 +23,7 @@ public class Line {
     Integer total_waitTime = 0;
     Integer total_tat = 0;
 
-    watingTime(processes, num, burstTime, burstTime);
+    watingTime(processes, num, burstTime, waitTime);
     turnAroundTime(processes, num, burstTime, waitTime, tat);
 
     System.out.println("Processes " + " Burst Time " + " Wati Time " + " Turn AroundTime\n");
