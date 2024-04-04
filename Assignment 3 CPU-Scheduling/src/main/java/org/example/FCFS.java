@@ -4,14 +4,25 @@ import java.util.AbstractQueue;
 import java.util.Iterator;
 import java.util.LinkedList;
 
-public class FIFO<Integer> extends AbstractQueue<Integer> {
+/**
+ * <p>First-in-first-out list. Includs methods to handle first elements in such as: <p>
+ * <ul>
+ * <li>'offer' to add elements</li>
+ * <li>'poll' to remove the first elements</li>
+ * <li>'peek' to get the first elements</li>
+ * </ul>
+ */
+public class FCFS<Integer> extends AbstractQueue<Integer> {
 
   private LinkedList<Integer> elements;
   private int processId;
   private int arrivalTime;
-  private int burtsTime;
+  private int burstTime;
 
-  public FIFO() {
+  /**
+   * Constructor for the FIFO-list algorithm.
+   */
+  public FCFS() {
     this.elements = new LinkedList<Integer>();
   }
 
