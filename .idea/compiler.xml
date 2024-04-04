@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="ClientSynchronization" />
         <module name="Assignment 1 - Client-Server-Calculator" />
+        <module name="Assignment-3-CPU-Scheduling" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
