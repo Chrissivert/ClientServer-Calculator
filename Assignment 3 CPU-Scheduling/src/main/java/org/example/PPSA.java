@@ -65,7 +65,7 @@ public class PPSA {
         processes.sort(Comparator.comparingInt(p -> p.arrivalTime));
 
         // Priority Queue to store processes based on priority
-        PriorityQueue<PPSA> pq = new PriorityQueue<>(Comparator.comparingInt(p -> p.priority));
+        PriorityQueue<PPSA> priorityQueue = new PriorityQueue<>(Comparator.comparingInt(p -> p.priority));
 
         int currentTime = 0;
         int completed = 0;
@@ -76,16 +76,16 @@ public class PPSA {
         while (completed < n) {
             // Add processes to the queue that have arrived
             while (!processes.isEmpty() && processes.get(0).arrivalTime <= currentTime) {
-                pq.add(processes.remove(0));
+                priorityQueue.add(processes.remove(0));
             }
 
-            if (pq.isEmpty()) {
+            if (priorityQueue.isEmpty()) {
                 currentTime++;
                 continue;
             }
 
             // Process with the highest priority
-            PPSA currentProcess = pq.poll();
+            PPSA currentProcess = priorityQueue.poll();
 
             // Execute the process for 1 unit of time
             System.out.print("| P" + currentProcess.processId + " ");
@@ -101,7 +101,7 @@ public class PPSA {
                 totalTurnaroundTime += turnaroundTime;
             } else {
                 // Add back to the queue if not completed
-                pq.add(currentProcess);
+                priorityQueue.add(currentProcess);
             }
         }
         System.out.println("|");
