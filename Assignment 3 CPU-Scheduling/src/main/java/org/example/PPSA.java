@@ -3,17 +3,26 @@ package org.example;
 import java.util.*;
 
 /**
- * This is the Preemptive Priority scheduling algorithm
+ * This class implements the Preemptive Priority Scheduling Algorithm.
+ * Preemptive Priority Scheduling is a scheduling algorithm in which the process with the highest priority
+ * is executed first. If two processes have the same priority, the one with the earliest arrival time is executed first.
+ *
+ * @author group 01
+ * @version 8/4/2024
  */
 public class PPSA {
-    private int processId;
-    private int arrivalTime;
-    private int burstTime;
-    private int priority;
-    private int remainingTime;
+    private int processId; // ID of the process
+    private int arrivalTime; // Time at which the process arrives
+    private int burstTime; // Time required for the process to execute
+    private int priority; // Priority of the process
+    private int remainingTime; // Remaining execution time of the process
 
     /**
-     * Creates an instance of the Preemptive Priority scheduling algorithm.
+     * Constructs an instance of the Preemptive Priority Scheduling Algorithm.
+     * @param processId ID of the process
+     * @param arrivalTime Time at which the process arrives
+     * @param burstTime Time required for the process to execute
+     * @param priority Priority of the process
      */
     public PPSA(int processId, int arrivalTime, int burstTime, int priority){
         this.processId = processId;
@@ -23,6 +32,12 @@ public class PPSA {
         this.remainingTime = burstTime;
     }
 
+    /**
+     * Main method to execute the Preemptive Priority Scheduling Algorithm.
+     * Prompts the user to enter details for processes and calculates average waiting time
+     * and average turnaround time for the processes.
+     * @param args Command-line arguments
+     */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter the number of processes: ");
@@ -65,7 +80,7 @@ public class PPSA {
                 continue;
             }
 
-            // Process with highest priority
+            // Process with the highest priority
             PPSA currentProcess = pq.poll();
 
             // Execute the process for 1 unit of time
