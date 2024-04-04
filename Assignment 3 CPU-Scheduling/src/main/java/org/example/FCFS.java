@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.LinkedList;
 
 /**
- * <p>First-in-first-out list. Includs methods to handle first elements in such as: <p>
+ * <p>First-in-first-out list. Includes methods to handle first elements in such as: <p>
  * <ul>
  * <li>'offer' to add elements</li>
  * <li>'poll' to remove the first elements</li>
