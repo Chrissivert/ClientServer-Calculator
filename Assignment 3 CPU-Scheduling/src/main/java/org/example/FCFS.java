@@ -1,6 +1,7 @@
 package org.example;
 
 import java.util.AbstractQueue;
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedList;
 
@@ -12,50 +13,47 @@ import java.util.LinkedList;
  * <li>'peek' to get the first elements</li>
  * </ul>
  */
-public class FCFS<Integer> extends AbstractQueue<Integer> {
+public class FCFS<T> extends AbstractQueue<T> {
 
-  private LinkedList<Integer> elements;
-  private int processId;
-  private int arrivalTime;
-  private int burstTime;
+  private LinkedList<T> elements;
 
   /**
    * Constructor for the FIFO-list algorithm.
    */
   public FCFS() {
-    this.elements = new LinkedList<Integer>();
+    this.elements = new LinkedList<T>();
   }
 
   @Override
-  public boolean offer(Integer num) {
-    if(num == null) {
+  public boolean offer(T t) {
+    if(t == null) {
       return false;
     }
 
-    this.elements.add(num);
+    this.elements.add(t);
     return true;
   }
 
   @Override
-  public Integer poll() {
-    Iterator<Integer> iterator = this.elements.iterator();
-    Integer num = iterator.next();
+  public T poll() {
+    Iterator<T> iterator = this.elements.iterator();
+    T t = iterator.next();
 
-    if (num != null) {
+    if (t != null) {
       iterator.remove();
-      return num;
+      return t;
     }
 
     return null;
   }
 
   @Override
-  public Integer peek() {
+  public T peek() {
     return this.elements.getFirst();
   }
 
   @Override
-  public Iterator<Integer> iterator() {
+  public Iterator<T> iterator() {
     return this.elements.iterator();
   }
 
