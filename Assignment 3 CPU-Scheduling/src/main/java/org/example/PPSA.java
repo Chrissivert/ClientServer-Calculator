@@ -7,8 +7,11 @@ import java.util.*;
  * Preemptive Priority Scheduling is a scheduling algorithm in which the process with the highest priority
  * is executed first. If two processes have the same priority, the one with the earliest arrival time is executed first.
  *
- * @author group 01
- * @version 8/4/2024
+ * To use this Algorithm, run the java class "PPSA". Firstly submit the number of processes in this algorithm. Then
+ * submit the following values to create an instance, such as process id, arrival time, burst time and priority.
+ *
+ * @author Group 10
+ * @version 07/04/2024
  */
 public class PPSA {
     private int processId; // ID of the process
