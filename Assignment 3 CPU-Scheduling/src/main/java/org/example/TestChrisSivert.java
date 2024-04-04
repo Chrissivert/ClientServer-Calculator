@@ -1,7 +1,5 @@
 package org.example;
 
-import java.text.ParseException;
-
 /**
  * First come, first served CPU-scheduling. Enter the number of processes,
  * burst time and arrival time in main method.
@@ -11,7 +9,6 @@ public class TestChrisSivert {
 
     /**
      * Function to find the waiting time for the processes
-     * @param processes array of processes
      * @param n number of processes
      * @param burstTime array of burst time
      * @param waitingTime array of waiting time
@@ -89,7 +86,7 @@ public class TestChrisSivert {
         System.out.printf("Average turn around time = %d ", averageTurnTime);
     }
 
-    public static void main(String[] args) throws ParseException {
+    public static void main(String[] args) {
         int processes[] = {1, 2, 3};
         int burst_time[] = {10, 5, 8};
         int arrival_time[] = {0, 2, 4};
