@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 public class LineTest {
   @Test
-  public void testAddBigerNumberFirst() {
+  public void testAddBiggerNumberFirst() {
     FIFO<Integer> line = new FIFO<>();
 
     line.offer(7);
