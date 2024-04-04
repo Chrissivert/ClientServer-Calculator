@@ -4,10 +4,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
-public class LineTest {
+public class FCFSTest {
   @Test
   public void testAddBiggerNumberFirst() {
-    FIFO<Integer> line = new FIFO<>();
+    FCFS<Integer> line = new FCFS<>();
 
     line.offer(7);
     line.offer(5);
@@ -21,7 +21,7 @@ public class LineTest {
 
   @Test
   public void testAddLowerNumberFirst() {
-    FIFO<Integer> line = new FIFO<>();
+    FCFS<Integer> line = new FCFS<>();
 
     line.add(5);
     line.add(7);
