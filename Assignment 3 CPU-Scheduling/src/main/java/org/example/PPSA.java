@@ -12,7 +12,10 @@ public class PPSA {
     /**
      * Creates an instance of the Preemptive Priority scheduling algorithm.
      */
-    public PPSA(){
-
+    public PPSA(int processId, int arrivalTime, int burstTime, int priority){
+        this.processId = processId;
+        this.arrivalTime = arrivalTime;
+        this.burstTime = burstTime;
+        this.priority = priority;
     }
 }
