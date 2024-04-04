@@ -6,9 +6,10 @@ import java.util.*;
  * This class implements the Preemptive Priority Scheduling Algorithm.
  * Preemptive Priority Scheduling is a scheduling algorithm in which the process with the highest priority
  * is executed first. If two processes have the same priority, the one with the earliest arrival time is executed first.
- *
- * To use this Algorithm, run the java class "PPSA". Firstly submit the number of processes in this algorithm. Then
- * submit the following values to create an instance, such as process id, arrival time, burst time and priority.
+ * To use this algorithm, run the java class "PPSA" and submit the number of processes to be used in this algorithm.
+ * Then submit the following values to create an instance of a process, such as process id, arrival time, burst time
+ * and priority. When submitting this, the algorithm will print a simplified gantt chart as well as the average
+ * waiting- and turnaround time.
  *
  * @author Group 10
  * @version 07/04/2024
