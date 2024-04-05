@@ -1,5 +1,6 @@
 package org.example;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class PPS {
@@ -8,11 +9,8 @@ public class PPS {
     private int burstTime;
     private int priority;
 
-    public PPS(int processID, int arrivalTime, int burstTime, int priority){
-        this.processID = processID;
-        this.arrivalTime = arrivalTime;
-        this.burstTime = burstTime;
-        this.priority = priority;
+    public PPS(){
+
     }
 
     public void Initialize(){
@@ -21,5 +19,18 @@ public class PPS {
         Scanner sc = new Scanner(System.in);
         int numberOfProcess = sc.nextInt();
         String process[] = new String[numberOfProcess];
+
+        for (int i = 0; i < numberOfProcess; i++) {
+            System.out.println("Enter ID of process number " + (i));
+            Scanner sc2 = new Scanner(System.in);
+            processID = sc2.nextInt();
+            System.out.println("Enter arrival time of process number " + (i));
+            arrivalTime = sc2.nextInt();
+            System.out.println("Enter burst time of process number " + (i));
+            burstTime = sc2.nextInt();
+            System.out.println("Enter priority of process number " + (i));
+            priority = sc2.nextInt();
+        }
+        System.out.println(Arrays.toString(process));
     }
 }
